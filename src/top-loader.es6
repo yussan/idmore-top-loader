@@ -14,13 +14,11 @@
         {
             return 'starting toploader ...'
         }
-
         end()
         {
             return 'stop toploader ...'
         }
     }
-    
     //declaration
     window.toploader = new TopLoader
 }();

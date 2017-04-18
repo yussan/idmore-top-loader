@@ -12,15 +12,19 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            babel: {
-                files: '*.es6',
-                tasks: ['babel']
-            }
+            scripts: {
+                files: ['./src/**/*.js', './src/**/*.es6'],
+                tasks: ['babel'],
+                options: {
+                    spawn: false,   
+                },
+            },
         }
     })
 
     // grunt.loadNpmTasks('grunt-contrib-uglify');    
     grunt.loadNpmTasks('grunt-babel');    
+    grunt.loadNpmTasks('grunt-contrib-watch');    
 
-    grunt.registerTask('default', ['babel']);  
+    grunt.registerTask('default', ['babel', 'watch']);  
 }

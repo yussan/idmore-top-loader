@@ -13,7 +13,7 @@ export function end()
 {
     if(typeof window != 'undefined')
     {
-        
+
     }else 
     {
         console.error('top page loader only worked on client')
