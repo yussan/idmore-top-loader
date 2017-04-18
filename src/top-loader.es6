@@ -10,7 +10,7 @@
 
     // main toploader
     class TopLoader{
-        start()
+        start(type = 'standart')
         {
             return 'starting toploader ...'
         }

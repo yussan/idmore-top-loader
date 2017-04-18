@@ -25,6 +25,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _createClass(TopLoader, [{
             key: 'start',
             value: function start() {
+                var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'standart';
+
                 return 'starting toploader ...';
             }
         }, {

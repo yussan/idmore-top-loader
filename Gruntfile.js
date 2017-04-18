@@ -7,14 +7,15 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '../dist/top-loader.js': 'top-loader.es6',
-                    '../npm_package/top-loader.js': 'top-loader.es6'
+                    './dist/top-loader.js': './src/top-loader.es6'
                 }
             }
         },
         watch: {
-            files: ['<%= babel.dist.files %>'],
-            tasks: ['babel']
+            babel: {
+                files: '*.es6',
+                tasks: ['babel']
+            }
         }
     })
 

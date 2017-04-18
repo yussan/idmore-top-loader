@@ -1,17 +1,19 @@
-export function standart()
+export function start()
 {
     if(typeof window != 'undefined')
     {
+
     }else 
     {
         console.error('top page loader only worked on client')
     }
 }
 
-export function looping()
+export function end()
 {
     if(typeof window != 'undefined')
     {
+        
     }else 
     {
         console.error('top page loader only worked on client')
@@ -23,8 +25,8 @@ export default function index()
     if(typeof window != 'undefined')
     {
         return {
-            standart, 
-            looping
+            start, 
+            end
         }
     }else 
     {
