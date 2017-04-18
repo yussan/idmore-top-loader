@@ -1,6 +1,7 @@
 # IdMore Top Loader 
+Is a top loader for the website. fully customizable, lightweight, no need third party.
 
-## Is a top loader for the website. fully customizable, lightweight, no need third party.
+## Usage
 
 ### Available at npm :
 * npm : https://www.npmjs.com/package/top-loader
@@ -17,14 +18,14 @@ import TopLoader from 'top-loader'
 * available type : standart(default) and looping
 */
 TopLoader.start(type)
-TopLoader.end()
+TopLoadelsr.end()
 
 ```
 ####
 **using dist assets**
 just copy paste ./dist directories, all you need is there.
 
-### Contribution :
+## Contributing :
 #### OS requirements
 - node : https://nodejs.org/en/download/
 - npm : https://docs.npmjs.com/cli/install

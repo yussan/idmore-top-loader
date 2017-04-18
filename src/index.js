@@ -1,3 +1,5 @@
+import TopLoader from './top-loader'
+
 export function start()
 {
     if(typeof window != 'undefined')

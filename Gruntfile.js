@@ -1,20 +1,23 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-        babel: {
-             options: {
-                sourceMap: false,
-                presets: ['babel-preset-es2015', 'babili']
+        browserify: {
+           dist: {
+            options: {
+               transform: [
+                  ["babelify", {
+                      "presets": ["es2015"]
+                  }]
+               ]
             },
-            dist: {
-                files: {
-                    './dist/top-loader.js': './src/top-loader.es6'
-                }
+            files: {
+               "./dist/top-loader.js": ["./src/top-loader.js"]
             }
+         } 
         },
         watch: {
             scripts: {
-                files: ['./src/**/*.js', './src/**/*.es6'],
-                tasks: ['babel'],
+                files: ['./src/**/*.js'],
+                tasks: ['browserify'],
                 options: {
                     spawn: false,   
                 },
@@ -22,9 +25,8 @@ module.exports = function(grunt) {
         }
     })
 
-    // grunt.loadNpmTasks('grunt-contrib-uglify');    
-    grunt.loadNpmTasks('grunt-babel');    
     grunt.loadNpmTasks('grunt-contrib-watch');    
+    grunt.loadNpmTasks('grunt-browserify');    
 
-    grunt.registerTask('default', ['babel', 'watch']);  
+    grunt.registerTask('default', ['browserify', 'watch']);  
 }
