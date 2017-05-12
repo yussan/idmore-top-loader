@@ -53,7 +53,7 @@ exports.default = TopLoader;
 
     window.addEventListener('load', function () {
         console.log('css injection...');
-        (0, _helpers.injectCSS)('./dist/top-loader.css');
+        (0, _helpers.injectCSS)('./top-loader.css');
     });
 
     //create wrapper

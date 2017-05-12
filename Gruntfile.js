@@ -10,7 +10,7 @@ module.exports = function(grunt) {
                ]
             },
             files: {
-               "./dist/top-loader.js": ["./src/top-loader.js"]
+               "./dist/top-loader.js": ["./src/js/top-loader.js"]
             }
          } 
         },

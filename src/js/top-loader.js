@@ -17,7 +17,7 @@ export default class TopLoader{
     //inject .css
     window.addEventListener('load', () => {
         console.log('css injection...');
-        injectCSS('./dist/top-loader.css')
+        injectCSS('./top-loader.css')
     })
 
     //create wrapper
